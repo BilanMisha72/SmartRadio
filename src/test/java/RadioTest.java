@@ -313,5 +313,41 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+    @Test
+    public void testSettingReductionVolume() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(0);
+
+        radio.reductionVolume();
+
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void testSettingReductionVolume1() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(1);
+
+        radio.reductionVolume();
+
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void testSettingReductionVolume2() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(100);
+
+        radio.reductionVolume();
+
+        int expected = 99;
+        int actual = radio.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+
+    }
 }
 
